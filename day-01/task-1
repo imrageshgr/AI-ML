@@ -1,0 +1,554 @@
+## Topic: **Introduction to Python + Variables + Data Types + Input & Output**
+
+---
+
+# 🎯 Today's Goal
+
+Today, you are **not learning Machine Learning yet**.
+
+You are learning the language that almost every AI/ML engineer uses: **Python**.
+
+Think of it this way:
+
+* Python is your **language**.
+* Machine Learning is your **knowledge**.
+* AI is what you **build**.
+
+If you don't know Python well, building AI models later will be much harder.
+
+---
+
+# 📖 Concept 1: What is Python?
+
+Imagine you and I are talking.
+
+I'm speaking in English because you understand English.
+
+Similarly, a computer understands only **machine language (0s and 1s)**.
+
+We need a language to communicate with the computer.
+
+Python is one such language.
+
+It lets us write:
+
+```python
+print("Hello")
+```
+
+Instead of writing millions of 0s and 1s.
+
+Python converts your code into instructions the computer can execute.
+
+---
+
+## 🌍 Real-Life Example
+
+Imagine you are ordering food.
+
+You tell the waiter:
+
+> "One Veg Biryani."
+
+The waiter tells the chef.
+
+The chef cooks the food.
+
+Here:
+
+* **You** → Programmer
+* **English** → Python
+* **Waiter** → Python Interpreter
+* **Chef** → Computer (CPU)
+
+You never talk directly to the chef.
+
+Similarly, you don't write machine code directly. Python acts as the translator.
+
+---
+
+## 💻 Code Example 1
+
+```python
+print("Hello World")
+```
+
+### Line-by-Line Explanation
+
+```python
+print()
+```
+
+`print` is a built-in Python function.
+
+Its job is to display something on the screen.
+
+Inside the parentheses:
+
+```python
+"Hello World"
+```
+
+This is called a **string** (text).
+
+### Output
+
+```text
+Hello World
+```
+
+---
+
+## 💻 Code Example 2
+
+```python
+print("Welcome")
+print("AI Engineer")
+```
+
+Output
+
+```text
+Welcome
+AI Engineer
+```
+
+Each `print()` creates a new line.
+
+---
+
+## 🧠 Quick Practice
+
+Write programs that print:
+
+```
+Hello Ragesh
+
+```
+
+Then:
+
+```
+Welcome to AI and ML learning journey
+
+```
+
+Then:
+
+```
+I will become an AI Engineer
+
+```
+
+---
+
+# 📖 Concept 2: Variables
+
+Imagine you have a water bottle.
+
+You pour water into it.
+
+Later you empty it and pour juice into it.
+
+The bottle is still the same.
+
+Only the contents change.
+
+A **variable** works the same way.
+
+It stores a value.
+
+---
+
+## 💻 Example 1
+
+```python
+name = "Ragesh"
+
+print(name)
+```
+
+Output
+
+```
+Ragesh
+```
+
+---
+
+### Understanding Every Line
+
+```python
+name
+```
+
+This is the variable name.
+
+---
+
+```python
+=
+```
+
+This means:
+
+> Store the value on the right inside the variable on the left.
+
+It is called the **assignment operator**.
+
+---
+
+```python
+"Ragesh"
+```
+
+This is the value.
+
+---
+
+### Visual Representation
+
+```
+name
+┌─────────────┐
+│  Ragesh     │
+└─────────────┘
+```
+
+---
+
+## Example 2
+
+```python
+city = "Chennai"
+
+print(city)
+```
+
+Output
+
+```
+Chennai
+```
+
+---
+
+## Example 3
+
+```python
+game = "Free Fire"
+
+print(game)
+```
+
+Output
+
+```
+Free Fire
+```
+
+---
+
+## Changing Variable Values
+
+```python
+score = 10
+
+print(score)
+
+score = 50
+
+print(score)
+```
+
+Output
+
+```
+10
+50
+```
+
+The value changed.
+
+---
+
+## 🧠 Practice
+
+Create variables for:
+
+* Your favorite movie
+* Your favorite game
+* Your favorite food
+
+Print each one.
+
+---
+
+# 📖 Concept 3: Data Types
+
+Python stores different kinds of data.
+
+Think of a supermarket.
+
+There are different shelves:
+
+* Fruits
+* Vegetables
+* Snacks
+
+Python also keeps different kinds of data separately.
+
+---
+
+## 1. String
+
+Text.
+
+```python
+name = "Ragesh"
+```
+
+---
+
+## 2. Integer
+
+Whole numbers.
+
+```python
+age = 21
+```
+
+---
+
+## 3. Float
+
+Decimal numbers.
+
+```python
+height = 5.8
+```
+
+---
+
+## 4. Boolean
+
+Only two values.
+
+```python
+True
+
+False
+```
+
+Used for decisions.
+
+Example:
+
+```
+Is Login Successful?
+
+True
+```
+
+---
+
+## Example
+
+```python
+name = "Ragesh"
+
+age = 21
+
+height = 5.8
+
+student = True
+
+print(name)
+
+print(age)
+
+print(height)
+
+print(student)
+```
+
+Output
+
+```
+Ragesh
+
+21
+
+5.8
+
+True
+```
+
+---
+
+## Practice
+
+Create one variable for each data type.
+
+---
+
+# 📖 Concept 4: Input
+
+Until now,
+
+YOU were giving information to Python.
+
+Now,
+
+Python asks YOU.
+
+---
+
+Example
+
+```python
+name = input("Enter your name: ")
+
+print(name)
+```
+
+Suppose the user types:
+
+```
+Ragesh
+```
+
+Output
+
+```
+Ragesh
+```
+
+---
+
+### How It Works
+
+Python waits.
+
+User types something.
+
+Python stores it.
+
+Then the program continues.
+
+---
+
+## Example
+
+```python
+game = input("Favorite Game: ")
+
+print(game)
+```
+
+---
+
+## Example
+
+```python
+city = input("City: ")
+
+print(city)
+```
+
+---
+
+## Practice
+
+Ask the user:
+
+* Name
+* City
+* Favorite Movie
+
+Print them.
+
+---
+
+# 🎯 Today's Main Project
+
+## Project Title
+
+### **Student Profile Generator**
+
+### Requirements
+
+Your program should:
+
+* Welcome the user.
+* Ask for:
+
+  * Name
+  * Age
+  * College
+  * Branch
+  * Favorite Programming Language
+  * Dream Company
+* Display all the information clearly.
+
+Use only the concepts learned today:
+
+* `print()`
+* Variables
+* Data Types
+* `input()`
+
+---
+
+# 🧩 Assessment (Easy → Medium → Hard)
+
+## 🟢 Easy
+
+1. Print your name.
+2. Create a variable called `city` and print it.
+3. Store your age in a variable and print it.
+
+---
+
+## 🟡 Medium
+
+1. Create variables for:
+
+   * Favorite Game
+   * Favorite Movie
+   * Dream Company
+
+2. Print all three.
+
+3. Change one variable and print it again.
+
+---
+
+## 🔴 Hard
+
+Create a **Gamer Profile** program.
+
+Ask the user for:
+
+* Name
+* Favorite Game
+* Rank
+* Country
+
+Then display the information in a neat format.
+
+---
+
+# 🎯 End-of-Day Challenge
+
+Without looking back at today's lesson, create a program for a **Library Member Registration System**.
+
+Your program should ask for:
+
+* Member Name
+* Age
+* Book Category
+* Membership ID
+
+Then display all the information neatly.
+
