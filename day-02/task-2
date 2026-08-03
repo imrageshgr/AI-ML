@@ -1,0 +1,311 @@
+🎯 Today's Goal
+
+Yesterday, your programs could store information.
+
+Today, your programs will start working with that information.
+
+You'll learn how to:
+
+Perform calculations.
+Convert data types.
+Build logic for future AI and ML projects.
+
+These concepts are used everywhere—from calculating model accuracy to processing datasets.
+
+📚 Topics You'll Learn
+1. Operators
+
+Think of operators as tools.
+
+Imagine you're a carpenter:
+
+A hammer drives nails.
+A saw cuts wood.
+
+In Python:
+
++ adds values.
+- subtracts.
+* multiplies.
+/ divides.
+Example 1: Addition
+a = 10
+b = 20
+
+result = a + b
+
+print(result)
+Step-by-Step
+a = 10
+
+Store 10 in the variable a.
+
+b = 20
+
+Store 20 in the variable b.
+
+result = a + b
+
+Python:
+
+Looks at a → 10
+Looks at b → 20
+Adds them.
+Stores 30 in result.
+print(result)
+
+Output:
+
+30
+Example 2: Subtraction
+marks = 95
+penalty = 5
+
+final_marks = marks - penalty
+
+print(final_marks)
+
+Output
+
+90
+Example 3: Multiplication
+price = 50
+quantity = 3
+
+total = price * quantity
+
+print(total)
+
+Output
+
+150
+Example 4: Division
+total_marks = 500
+subjects = 5
+
+average = total_marks / subjects
+
+print(average)
+
+Output
+
+100.0
+
+Notice the result is 100.0, which is a float.
+
+🧠 Practice
+
+Write programs to:
+
+Add two numbers.
+Subtract two numbers.
+Multiply two numbers.
+Divide two numbers.
+📖 Concept 2: User Input Is Text
+
+Look at this program:
+
+age = input("Enter your age: ")
+
+print(age)
+
+If you enter:
+
+21
+
+Python stores:
+
+"21"
+
+Not:
+
+21
+
+Even though you typed a number, input() returns a string by default.
+
+Problem
+age = input("Enter age: ")
+
+print(age + 5)
+
+What happens?
+
+You'll get an error because Python can't add a string and an integer.
+
+📖 Concept 3: Type Conversion
+
+To perform calculations, convert the input.
+
+Integer Conversion
+age = int(input("Enter age: "))
+
+print(age + 5)
+
+Input:
+
+21
+
+Output:
+
+26
+
+Now age is an integer, so Python can do arithmetic.
+
+Float Conversion
+height = float(input("Enter height: "))
+
+print(height)
+
+Input:
+
+5.8
+
+Output:
+
+5.8
+Practice
+
+Ask the user for:
+
+Age
+Height
+
+Convert them to the correct data type and print the values.
+
+📖 Concept 4: Arithmetic Expressions
+
+Python evaluates expressions from left to right, following mathematical rules.
+
+Example:
+
+a = 10
+b = 5
+
+answer = a + b * 2
+
+print(answer)
+
+Think before running it.
+
+Does Python calculate:
+
+(10 + 5) × 2 = 30
+
+or
+
+10 + (5 × 2) = 20
+
+Run the code and find out.
+
+💻 Coding Practice
+Easy
+
+Calculate:
+
+15 + 25
+Medium
+
+Ask the user for two numbers and print:
+
+Sum
+Difference
+Product
+Quotient
+Hard
+
+Ask the user:
+
+Price of one item
+Quantity
+
+Calculate:
+
+Total cost
+
+🛠️ Today's Main Project
+Project Title
+Simple Expense Calculator
+Requirements
+
+Ask the user for:
+
+Monthly income
+Rent
+Food expenses
+Transport expenses
+
+Calculate:
+
+Total expenses
+Remaining money
+
+Display the results clearly.
+
+Use:
+
+Variables
+input()
+int() or float()
+Arithmetic operators
+print()
+
+🧩 Assessment
+
+🟢 Easy
+What is the output?
+x = 8
+y = 2
+
+print(x * y)
+
+What is the output?
+print(20 / 5)
+
+🟡 Medium
+
+Predict the output:
+
+a = 12
+b = 4
+
+print(a + b)
+print(a - b)
+print(a * b)
+print(a / b)
+
+🔴 Hard
+
+Without running the program, predict the output:
+
+num = int(input("Enter a number: "))
+
+result = num * 5 + 10
+
+print(result)
+
+If the user enters:
+
+8
+
+What will the output be?
+
+Explain why.
+
+🎯 End-of-Day Challenge
+
+Create a Shopping Bill Calculator.
+
+Requirements:
+
+Ask the user for:
+Product name
+Price of one product
+Quantity
+Calculate the total bill.
+Print a neat summary showing:
+Product name
+Price
+Quantity
+Total amount
+
+Rule: Use only the concepts from Day 01 and Day 02.
