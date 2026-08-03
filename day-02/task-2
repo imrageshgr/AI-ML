@@ -300,7 +300,7 @@ Requirements:
 Ask the user for:
 Product name
 Price of one product
-Quantity
+Quantity    
 Calculate the total bill.
 Print a neat summary showing:
 Product name
