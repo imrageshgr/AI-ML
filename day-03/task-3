@@ -1,0 +1,539 @@
+# 🎯 Today's Goal
+
+Until now, your programs could:
+
+* Store data ✅
+* Take user input ✅
+* Perform calculations ✅
+
+But they **couldn't make decisions**.
+
+Today, you'll teach Python **how to think**.
+
+This is one of the most important concepts in programming because every AI application, website, and game makes decisions.
+
+For example:
+
+* Is the password correct?
+* Is the customer eligible for a loan?
+* Is the email spam?
+* Is this image a cat or a dog?
+* Should a robot turn left or right?
+
+All of these start with **decision making**.
+
+---
+
+# 📖 Concept 1: What is an `if` Statement?
+
+## 🏠 Real-Life Example
+
+Imagine you're standing outside your house.
+
+Your mom says:
+
+> **If it is raining, take an umbrella.**
+
+Think about it.
+
+There are **two possibilities**:
+
+### Situation 1
+
+It's raining 🌧️
+
+You take the umbrella.
+
+### Situation 2
+
+It's not raining ☀️
+
+You don't take the umbrella.
+
+This is exactly how an `if` statement works.
+
+---
+
+# Syntax
+
+```python
+if condition:
+    statement
+```
+
+Read it as:
+
+> If the condition is **True**, execute the indented code.
+
+---
+
+# 💻 Example 1
+
+```python
+age = 20
+
+if age >= 18:
+    print("You can vote.")
+```
+
+---
+
+## Step-by-Step Explanation
+
+### Line 1
+
+```python
+age = 20
+```
+
+Store `20` inside the variable `age`.
+
+---
+
+### Line 2
+
+```python
+if age >= 18:
+```
+
+Python asks:
+
+> Is 20 greater than or equal to 18?
+
+Answer:
+
+```text
+True
+```
+
+So Python executes the next indented line.
+
+---
+
+### Line 3
+
+```python
+print("You can vote.")
+```
+
+Output:
+
+```text
+You can vote.
+```
+
+---
+
+# Example 2
+
+```python
+age = 15
+
+if age >= 18:
+    print("You can vote.")
+```
+
+Python asks:
+
+```text
+15 >= 18 ?
+```
+
+Answer:
+
+```text
+False
+```
+
+Since it's false, Python skips the `print()`.
+
+Output:
+
+```text
+(No output)
+```
+
+---
+
+# 📖 Concept 2: Comparison Operators
+
+These operators compare values.
+
+| Operator | Meaning               | Example     |
+| -------- | --------------------- | ----------- |
+| `==`     | Equal to              | `age == 18` |
+| `!=`     | Not equal to          | `age != 18` |
+| `>`      | Greater than          | `age > 18`  |
+| `<`      | Less than             | `age < 18`  |
+| `>=`     | Greater than or equal | `age >= 18` |
+| `<=`     | Less than or equal    | `age <= 18` |
+
+---
+
+# Example
+
+```python
+marks = 85
+
+if marks > 50:
+    print("Pass")
+```
+
+Output
+
+```text
+Pass
+```
+
+---
+
+# 📖 Concept 3: `if...else`
+
+Sometimes you want Python to do one thing if the condition is true, and another thing if it's false.
+
+---
+
+## Real-Life Example
+
+Imagine you go to an ATM.
+
+If your PIN is correct:
+
+```text
+Access Granted
+```
+
+Otherwise:
+
+```text
+Access Denied
+```
+
+---
+
+## Example
+
+```python
+age = 16
+
+if age >= 18:
+    print("Eligible to vote")
+else:
+    print("Not eligible")
+```
+
+Output
+
+```text
+Not eligible
+```
+
+---
+
+# Step-by-Step
+
+Python checks:
+
+```text
+16 >= 18 ?
+```
+
+Answer:
+
+```text
+False
+```
+
+So it skips the `if` block and runs the `else` block.
+
+---
+
+# 📖 Concept 4: `elif`
+
+Sometimes there are more than two possibilities.
+
+---
+
+## Real-Life Example
+
+Exam Result:
+
+Marks:
+
+90–100 → Grade A
+
+75–89 → Grade B
+
+50–74 → Grade C
+
+Below 50 → Fail
+
+This cannot be handled with just `if` and `else`.
+
+---
+
+Example
+
+```python
+marks = 82
+
+if marks >= 90:
+    print("Grade A")
+
+elif marks >= 75:
+    print("Grade B")
+
+elif marks >= 50:
+    print("Grade C")
+
+else:
+    print("Fail")
+```
+
+Output
+
+```text
+Grade B
+```
+
+---
+
+# How Python Thinks
+
+Marks = 82
+
+Is 82 ≥ 90?
+
+❌ No
+
+Is 82 ≥ 75?
+
+✅ Yes
+
+Print:
+
+```text
+Grade B
+```
+
+Then stop checking.
+
+---
+
+# 📖 Concept 5: Indentation
+
+Look carefully.
+
+Correct:
+
+```python
+age = 20
+
+if age >= 18:
+    print("Adult")
+```
+
+Wrong:
+
+```python
+age = 20
+
+if age >= 18:
+print("Adult")
+```
+
+Python will show an **IndentationError** because the `print()` line must be indented.
+
+---
+
+# 💻 Practice Examples
+
+## Example 1
+
+Ask the user for their age.
+
+If they are 18 or older:
+
+Print:
+
+```text
+Adult
+```
+
+Otherwise:
+
+```text
+Minor
+```
+
+---
+
+## Example 2
+
+Ask the user for a number.
+
+If it is positive:
+
+```text
+Positive Number
+```
+
+Otherwise:
+
+```text
+Negative Number
+```
+
+---
+
+## Example 3
+
+Ask the user for a password.
+
+If it matches:
+
+```text
+python123
+```
+
+Print:
+
+```text
+Login Successful
+```
+
+Otherwise:
+
+```text
+Wrong Password
+```
+
+---
+
+# 🛠️ Today's Main Project
+
+## **Project Title**
+
+### **Student Result Analyzer**
+
+### Requirements
+
+Ask the user for:
+
+* Student Name
+* Marks (out of 100)
+
+Then:
+
+* Marks ≥ 90 → Grade A
+* Marks ≥ 75 → Grade B
+* Marks ≥ 50 → Grade C
+* Otherwise → Fail
+
+Finally display:
+
+* Student Name
+* Marks
+* Grade
+
+---
+
+# 🧩 Assessment
+
+## 🟢 Easy
+
+### Question 1
+
+Predict the output:
+
+```python
+age = 25
+
+if age > 18:
+    print("Adult")
+```
+
+---
+
+### Question 2
+
+Predict the output:
+
+```python
+number = 5
+
+if number < 0:
+    print("Negative")
+
+else:
+    print("Positive")
+```
+
+---
+
+## 🟡 Medium
+
+Without running the code, predict the output:
+
+```python
+marks = 45
+
+if marks >= 50:
+    print("Pass")
+else:
+    print("Fail")
+```
+
+Explain **why**.
+
+---
+
+## 🔴 Hard
+
+Predict the output:
+
+```python
+score = 78
+
+if score >= 90:
+    print("Excellent")
+
+elif score >= 75:
+    print("Very Good")
+
+elif score >= 50:
+    print("Good")
+
+else:
+    print("Needs Improvement")
+```
+
+Explain each comparison Python performs before printing the answer.
+
+---
+
+# 🎯 End-of-Day Challenge
+
+Build a **Movie Ticket Eligibility Checker**.
+
+Requirements:
+
+Ask the user for:
+
+* Name
+* Age
+
+Rules:
+
+* Age below 5 → Free Ticket
+* Age 5–17 → Child Ticket
+* Age 18–59 → Adult Ticket
+* Age 60 or above → Senior Citizen Ticket
+
+Display:
+
+* Name
+* Age
+* Ticket Category
+
+---
