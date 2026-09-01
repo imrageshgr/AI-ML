@@ -1,0 +1,781 @@
+### 🎯 Today's goal
+
+Yesterday, you taught Python to **make decisions** with `if`, `elif`, and `else`.
+
+Today, you'll teach Python to **repeat a task automatically**.
+
+This is extremely important for AI/ML because later you'll use loops to work with:
+
+* thousands of data records,
+* images,
+* predictions,
+* training iterations,
+* model results.
+
+---
+
+# 1. What is a Loop?
+
+Imagine you want to print:
+
+```text
+Hello
+Hello
+Hello
+Hello
+Hello
+```
+
+You could write:
+
+```python
+print("Hello")
+print("Hello")
+print("Hello")
+print("Hello")
+print("Hello")
+```
+
+It works, but imagine doing that **10,000 times**.
+
+That's where a loop helps.
+
+Instead:
+
+```python
+for i in range(5):
+    print("Hello")
+```
+
+Output:
+
+```text
+Hello
+Hello
+Hello
+Hello
+Hello
+```
+
+You told Python:
+
+> "Repeat this five times."
+
+---
+
+# 2. `for` Loop
+
+The basic structure is:
+
+```python
+for variable in something:
+    # code to repeat
+```
+
+Let's start with the easiest example.
+
+```python
+for i in range(5):
+    print("Hello")
+```
+
+### What happens?
+
+`range(5)` produces:
+
+```text
+0
+1
+2
+3
+4
+```
+
+So Python repeats the `print()` five times.
+
+Notice something important:
+
+**It starts at 0 and stops before 5.**
+
+---
+
+# 3. Understanding `range()`
+
+This is very important.
+
+### `range(5)`
+
+```python
+range(5)
+```
+
+means:
+
+```text
+0 1 2 3 4
+```
+
+### `range(3)`
+
+```text
+0 1 2
+```
+
+### `range(10)`
+
+```text
+0 1 2 3 4 5 6 7 8 9
+```
+
+---
+
+# 4. Seeing the Loop Variable
+
+Look at this:
+
+```python
+for i in range(5):
+    print(i)
+```
+
+Output:
+
+```text
+0
+1
+2
+3
+4
+```
+
+Here `i` changes during every iteration.
+
+Think of it like this:
+
+```text
+First loop  → i = 0
+Second loop → i = 1
+Third loop  → i = 2
+Fourth loop → i = 3
+Fifth loop  → i = 4
+```
+
+---
+
+# 🧠 Predict Before Running
+
+What will this print?
+
+```python
+for i in range(3):
+    print(i)
+```
+
+Don't run it yet.
+
+Think carefully and tell me the answer later.
+
+---
+
+# 5. Starting From a Different Number
+
+You can give `range()` two numbers:
+
+```python
+for i in range(1, 6):
+    print(i)
+```
+
+Output:
+
+```text
+1
+2
+3
+4
+5
+```
+
+Here:
+
+```python
+range(1, 6)
+```
+
+means:
+
+> Start at `1`, stop **before** `6`.
+
+---
+
+# 6. Practical Example — Counting
+
+```python
+for number in range(1, 11):
+    print(number)
+```
+
+Output:
+
+```text
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+```
+
+You just created a counting program with **one loop**.
+
+---
+
+# 7. `for` Loop With a List
+
+You'll properly learn lists tomorrow, but let's see a simple example now.
+
+```python
+games = ["Free Fire", "PUBG", "Minecraft"]
+
+for game in games:
+    print(game)
+```
+
+Output:
+
+```text
+Free Fire
+PUBG
+Minecraft
+```
+
+Python takes each item one by one.
+
+Think:
+
+```text
+game = "Free Fire"
+print it
+
+game = "PUBG"
+print it
+
+game = "Minecraft"
+print it
+```
+
+---
+
+# 8. `while` Loop
+
+There is another important type of loop:
+
+```python
+while
+```
+
+A `while` loop means:
+
+> Keep repeating **while a condition is True**.
+
+Example:
+
+```python
+count = 1
+
+while count <= 5:
+    print(count)
+    count = count + 1
+```
+
+Output:
+
+```text
+1
+2
+3
+4
+5
+```
+
+---
+
+# 🔍 Understand This Carefully
+
+Start:
+
+```python
+count = 1
+```
+
+Python checks:
+
+```python
+count <= 5
+```
+
+Is:
+
+```text
+1 <= 5
+```
+
+True.
+
+So it prints `1`.
+
+Then:
+
+```python
+count = count + 1
+```
+
+Now:
+
+```text
+count = 2
+```
+
+Python checks again.
+
+```text
+2 <= 5 → True
+```
+
+It continues.
+
+Eventually:
+
+```text
+count = 6
+```
+
+Python checks:
+
+```text
+6 <= 5 → False
+```
+
+The loop stops.
+
+---
+
+# ⚠️ Very Important: Infinite Loops
+
+Look at this:
+
+```python
+count = 1
+
+while count <= 5:
+    print(count)
+```
+
+What's missing?
+
+We never change `count`.
+
+So it stays:
+
+```text
+1
+1
+1
+1
+1
+1
+1
+...
+```
+
+The loop never ends.
+
+This is called an **infinite loop**.
+
+That's why when using `while`, you must think:
+
+> **What will eventually make my condition False?**
+
+---
+
+# 9. Combining Loops + `if`
+
+Now things become more interesting.
+
+You can put an `if` inside a loop.
+
+Example:
+
+```python
+for number in range(1, 11):
+
+    if number % 2 == 0:
+        print(number)
+```
+
+Output:
+
+```text
+2
+4
+6
+8
+10
+```
+
+What's happening?
+
+Python checks every number:
+
+```text
+1 → odd → skip
+2 → even → print
+3 → odd → skip
+4 → even → print
+...
+```
+
+This combination of **loops + conditions** is extremely important for ML data processing.
+
+---
+
+# 10. The `%` Operator
+
+You saw:
+
+```python
+number % 2
+```
+
+`%` gives the **remainder** after division.
+
+Examples:
+
+```text
+10 % 2 = 0
+9 % 2 = 1
+8 % 2 = 0
+7 % 2 = 1
+```
+
+Therefore:
+
+```python
+if number % 2 == 0:
+```
+
+means:
+
+> If the number has no remainder when divided by 2, it is even.
+
+---
+
+# 🧪 Practice — Easy
+
+### Exercise 1
+
+Print numbers from `1` to `10` using a `for` loop.
+
+---
+
+### Exercise 2
+
+Print:
+
+```text
+Python
+Python
+Python
+Python
+Python
+```
+
+using a loop.
+
+---
+
+### Exercise 3
+
+Print numbers from `10` down to `1`.
+
+**Hint:** You'll need to learn the third argument of `range()`.
+
+Try to figure it out yourself first.
+
+---
+
+# 🟡 Practice — Medium
+
+### Exercise 4
+
+Ask the user for a number.
+
+Then print its multiplication table.
+
+For example, if the user enters:
+
+```text
+5
+```
+
+Your program should produce:
+
+```text
+5
+10
+15
+20
+25
+30
+...
+50
+```
+
+---
+
+### Exercise 5
+
+Print only the even numbers between `1` and `20`.
+
+---
+
+### Exercise 6
+
+Print only the odd numbers between `1` and `20`.
+
+---
+
+# 🔴 Practice — Slightly Harder
+
+### Exercise 7
+
+Ask the user for a number.
+
+Calculate the **sum of all numbers from 1 to that number**.
+
+For example:
+
+```text
+Input: 5
+```
+
+Calculation:
+
+```text
+1 + 2 + 3 + 4 + 5
+```
+
+Output:
+
+```text
+15
+```
+
+Try to design the logic yourself.
+
+---
+
+# 🛠️ Today's Main Project
+
+## **Project: Number Analysis Tool**
+
+Create a program that asks the user for a positive number.
+
+Your program should:
+
+1. Count from `1` to that number.
+2. Display each number.
+3. Identify whether each number is **even or odd**.
+4. Calculate the total sum of all the numbers.
+5. Display the final sum.
+
+### Example
+
+If the user enters:
+
+```text
+5
+```
+
+The output should be approximately:
+
+```text
+1 - Odd
+2 - Even
+3 - Odd
+4 - Even
+5 - Odd
+
+Total = 15
+```
+
+### Concepts you must use
+
+* `input()`
+* `int()`
+* `for`
+* `range()`
+* `if/else`
+* `%`
+* Variables
+* Arithmetic
+
+**Don't worry if this feels harder than Day 01. That's intentional.**
+
+You're now combining concepts instead of learning each one separately.
+
+---
+
+# 🧠 Day 04 Assessment
+
+These questions are designed to be understandable and gradually increase in difficulty.
+
+## 🟢 Question 1
+
+What is the output?
+
+```python
+for i in range(4):
+    print(i)
+```
+
+Choose:
+
+**A)** `1 2 3 4`
+
+**B)** `0 1 2 3`
+
+**C)** `0 1 2 3 4`
+
+---
+
+## 🟢 Question 2
+
+What will this print?
+
+```python
+for i in range(1, 4):
+    print("Hello")
+```
+
+---
+
+## 🟡 Question 3
+
+What is the output?
+
+```python
+for number in range(1, 6):
+
+    if number % 2 == 0:
+        print(number)
+```
+
+---
+
+## 🟡 Question 4
+
+What happens here?
+
+```python
+count = 1
+
+while count <= 3:
+    print(count)
+    count = count + 1
+```
+
+Write the output.
+
+---
+
+## 🔴 Question 5
+
+Predict the output **before running it**:
+
+```python
+total = 0
+
+for number in range(1, 5):
+    total = total + number
+
+print(total)
+```
+
+Then explain **how `total` changes during every loop**.
+
+---
+
+# 🎯 End-of-Day Challenge
+
+## **Electricity Bill Calculator**
+
+Build a program that asks the user for the number of electricity units consumed.
+
+For every unit from `1` up to the entered amount, your program should process the units and calculate the bill.
+
+Use a simple pricing rule that **you define yourself**.
+
+For example, you could decide:
+
+```text
+First 100 units → ₹2 per unit
+101–200 units → ₹3 per unit
+Above 200 → ₹5 per unit
+```
+
+Your program should calculate the total using:
+
+* `input()`
+* `int()`
+* `for` or `while`
+* `if/elif/else`
+* Variables
+* Arithmetic
+
+**Important:** Don't copy a solution from me. Design the logic yourself first.
+
+---
+
+# 🧠 One Important AI/ML Connection
+
+Today you're learning:
+
+```text
+Data
+ ↓
+Loop through data
+ ↓
+Check a condition
+ ↓
+Process it
+ ↓
+Store the result
+```
+
+Later, ML will look more like:
+
+```text
+Dataset
+ ↓
+Process thousands of records
+ ↓
+Clean the data
+ ↓
+Extract features
+ ↓
+Train model
+ ↓
+Make predictions
+ ↓
+Evaluate results
+```
+
+The complexity will increase dramatically, but the programming thinking you're building today will remain useful.
+
+---
+
