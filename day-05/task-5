@@ -1,0 +1,1022 @@
+# 🎯 Today's Goal
+
+By the end of Day 05, you should understand:
+
+* What a function is
+* Why functions are useful
+* How to create a function
+* How to call a function
+* Parameters
+* Arguments
+* `return`
+* Difference between `print()` and `return`
+* Multiple parameters
+* Reusing functions
+* Combining functions with `if` and loops
+
+---
+
+# 1. What Is a Function?
+
+Think about a **washing machine**.
+
+You put clothes inside:
+
+```text
+Input → Clothes
+```
+
+Press a button:
+
+```text
+Process → Washing
+```
+
+You get:
+
+```text
+Output → Clean clothes
+```
+
+A Python function works similarly.
+
+```text
+Input → Function → Output
+```
+
+A function is a **reusable block of code that performs a specific task**.
+
+---
+
+# 2. Your First Function
+
+Look at this:
+
+```python
+def greet():
+    print("Hello!")
+```
+
+Don't run it yet.
+
+You have **created** a function, but you haven't used it.
+
+To use it:
+
+```python
+greet()
+```
+
+Output:
+
+```text
+Hello!
+```
+
+---
+
+# 🧠 Understand the Code
+
+### `def`
+
+```python
+def
+```
+
+means:
+
+> "I'm defining/creating a function."
+
+---
+
+### Function name
+
+```python
+greet
+```
+
+We gave our function the name `greet`.
+
+---
+
+### Parentheses
+
+```python
+()
+```
+
+These are where we'll later put information that the function needs.
+
+---
+
+### Colon
+
+```python
+:
+```
+
+It tells Python that the function's block begins.
+
+---
+
+### Indentation
+
+```python
+def greet():
+    print("Hello!")
+```
+
+The indented code belongs to the function.
+
+---
+
+# 3. Calling a Function
+
+Creating:
+
+```python
+def greet():
+    print("Hello!")
+```
+
+doesn't execute it.
+
+You need to call it:
+
+```python
+greet()
+```
+
+Complete program:
+
+```python
+def greet():
+    print("Hello!")
+
+greet()
+```
+
+Output:
+
+```text
+Hello!
+```
+
+---
+
+# 4. Why Are Functions Useful?
+
+Without a function:
+
+```python
+print("Welcome to AI")
+print("Welcome to AI")
+print("Welcome to AI")
+```
+
+With a function:
+
+```python
+def welcome():
+    print("Welcome to AI")
+
+welcome()
+welcome()
+welcome()
+```
+
+You write the logic **once** and reuse it.
+
+That's the important idea.
+
+---
+
+# 🧪 Practice 1
+
+Create a function:
+
+```text
+say_hello
+```
+
+It should print:
+
+```text
+Hello, AI Engineer!
+```
+
+Then call it three times.
+
+---
+
+# 5. Functions With Parameters
+
+Now let's make the function more useful.
+
+Suppose we want to greet different people.
+
+```python
+def greet(name):
+    print("Hello", name)
+```
+
+Now:
+
+```python
+greet("Ragesh")
+greet("Rahul")
+greet("Arun")
+```
+
+Output:
+
+```text
+Hello Ragesh
+Hello Rahul
+Hello Arun
+```
+
+---
+
+# 🧠 What Is `name`?
+
+Here:
+
+```python
+def greet(name):
+```
+
+`name` is called a **parameter**.
+
+When we write:
+
+```python
+greet("Ragesh")
+```
+
+`"Ragesh"` is an **argument**.
+
+Think:
+
+```text
+Parameter = placeholder
+Argument  = actual value
+```
+
+---
+
+# 6. Another Example
+
+```python
+def introduce(name, age):
+    print("Name:", name)
+    print("Age:", age)
+```
+
+Call it:
+
+```python
+introduce("Ragesh", 21)
+```
+
+Output:
+
+```text
+Name: Ragesh
+Age: 21
+```
+
+Here there are two parameters:
+
+```python
+name
+age
+```
+
+and two arguments:
+
+```python
+"Ragesh"
+21
+```
+
+---
+
+# 🧪 Practice 2
+
+Create a function called:
+
+```text
+student_info
+```
+
+It should accept:
+
+* name
+* college
+* branch
+
+and print all three.
+
+Call the function with your own information.
+
+---
+
+# 7. Function With Calculation
+
+Now functions become more useful.
+
+```python
+def add(a, b):
+    print(a + b)
+```
+
+Call:
+
+```python
+add(10, 20)
+```
+
+Output:
+
+```text
+30
+```
+
+Another call:
+
+```python
+add(100, 50)
+```
+
+Output:
+
+```text
+150
+```
+
+The same function works with different values.
+
+---
+
+# 8. `return`
+
+This is **very important for AI/ML**.
+
+Look at:
+
+```python
+def add(a, b):
+    return a + b
+```
+
+Now:
+
+```python
+result = add(10, 20)
+
+print(result)
+```
+
+Output:
+
+```text
+30
+```
+
+---
+
+# 🧠 What Does `return` Do?
+
+Think of a vending machine.
+
+You put money in:
+
+```text
+Input → ₹20
+```
+
+Machine processes it.
+
+Then it gives you:
+
+```text
+Output → Drink
+```
+
+A function can also produce a result.
+
+```text
+a + b
+   ↓
+function
+   ↓
+result
+```
+
+`return` sends the result **back to the place where the function was called**.
+
+---
+
+# 9. `print()` vs `return`
+
+This difference is extremely important.
+
+### `print()`
+
+```python
+def add(a, b):
+    print(a + b)
+```
+
+It displays the answer.
+
+### `return`
+
+```python
+def add(a, b):
+    return a + b
+```
+
+It gives the answer back so another part of the program can use it.
+
+For example:
+
+```python
+def add(a, b):
+    return a + b
+
+result = add(10, 20)
+
+final_result = result * 2
+
+print(final_result)
+```
+
+Output:
+
+```text
+60
+```
+
+Because:
+
+```text
+10 + 20 = 30
+30 × 2 = 60
+```
+
+This idea becomes **very important later when you build ML functions that return predictions, accuracy, processed data, etc.**
+
+---
+
+# 🧪 Practice 3
+
+Create:
+
+```python
+def square(number):
+    return number * number
+```
+
+Then:
+
+```python
+result = square(5)
+
+print(result)
+```
+
+Expected output:
+
+```text
+25
+```
+
+Then try different numbers yourself.
+
+---
+
+# 10. Multiple Functions
+
+You can create many functions in one program.
+
+```python
+def add(a, b):
+    return a + b
+
+
+def subtract(a, b):
+    return a - b
+
+
+def multiply(a, b):
+    return a * b
+```
+
+Then:
+
+```python
+print(add(10, 5))
+print(subtract(10, 5))
+print(multiply(10, 5))
+```
+
+Output:
+
+```text
+15
+5
+50
+```
+
+Each function has **one specific job**.
+
+That's an important programming principle.
+
+---
+
+# 11. Functions + User Input
+
+Now combine what you've learned.
+
+```python
+def add(a, b):
+    return a + b
+
+
+num1 = int(input("Enter first number: "))
+num2 = int(input("Enter second number: "))
+
+result = add(num1, num2)
+
+print("Result:", result)
+```
+
+Suppose you enter:
+
+```text
+10
+20
+```
+
+Python does:
+
+```text
+num1 = 10
+num2 = 20
+
+add(10, 20)
+
+10 + 20
+
+return 30
+
+result = 30
+```
+
+Output:
+
+```text
+Result: 30
+```
+
+---
+
+# 12. Functions + `if`
+
+You can also put decisions inside functions.
+
+```python
+def check_number(number):
+
+    if number > 0:
+        return "Positive"
+
+    elif number < 0:
+        return "Negative"
+
+    else:
+        return "Zero"
+```
+
+Then:
+
+```python
+print(check_number(10))
+print(check_number(-5))
+print(check_number(0))
+```
+
+Output:
+
+```text
+Positive
+Negative
+Zero
+```
+
+---
+
+# 13. Functions + Loops
+
+You can also use loops inside functions.
+
+```python
+def print_numbers(n):
+
+    for number in range(1, n + 1):
+        print(number)
+```
+
+Call:
+
+```python
+print_numbers(5)
+```
+
+Output:
+
+```text
+1
+2
+3
+4
+5
+```
+
+You're now combining:
+
+**Function + Loop**
+
+This is the beginning of writing more organised programs.
+
+---
+
+# 🧠 Think Like an Engineer
+
+Suppose you're building an ML application.
+
+You might eventually have functions like:
+
+```text
+load_data()
+clean_data()
+prepare_data()
+train_model()
+evaluate_model()
+make_prediction()
+```
+
+Each function has a **specific responsibility**.
+
+Instead of putting everything into one huge block of code, you divide the system into smaller pieces.
+
+That's why functions are so important.
+
+---
+
+# 🧪 Practice — Easy
+
+### 1.
+
+Create:
+
+```python
+def welcome():
+```
+
+Print a welcome message.
+
+Call it twice.
+
+---
+
+### 2.
+
+Create:
+
+```python
+def show_name(name):
+```
+
+Print the name.
+
+Call it with three different names.
+
+---
+
+### 3.
+
+Create:
+
+```python
+def double(number):
+```
+
+Return twice the number.
+
+Example:
+
+```text
+double(5) → 10
+```
+
+---
+
+# 🟡 Practice — Medium
+
+### 4. Calculator Functions
+
+Create four functions:
+
+```text
+add()
+subtract()
+multiply()
+divide()
+```
+
+Each function should accept two numbers and **return** the result.
+
+Then test each function.
+
+---
+
+### 5. Even/Odd Function
+
+Create:
+
+```python
+def check_even_odd(number):
+```
+
+It should return:
+
+```text
+Even
+```
+
+or
+
+```text
+Odd
+```
+
+Use `%`.
+
+---
+
+### 6. Grade Function
+
+Create:
+
+```python
+def calculate_grade(marks):
+```
+
+Rules:
+
+```text
+90+ → A
+75–89 → B
+50–74 → C
+Below 50 → Fail
+```
+
+Return the appropriate grade.
+
+---
+
+# 🔴 Practice — Challenge
+
+Create:
+
+```python
+def calculate_sum(n):
+```
+
+It should calculate:
+
+```text
+1 + 2 + 3 + ... + n
+```
+
+and **return** the answer.
+
+Example:
+
+```text
+calculate_sum(5)
+```
+
+should return:
+
+```text
+15
+```
+
+Don't copy the previous loop example. Try to build it yourself.
+
+---
+
+# 🛠️ Today's Main Project
+
+# **Project: Smart Calculator**
+
+Build a calculator using **functions**.
+
+Your program should ask the user for:
+
+* First number
+* Second number
+* Operation
+
+For example:
+
+```text
+Enter first number: 20
+Enter second number: 5
+Enter operation: *
+```
+
+Then use functions to perform:
+
+* Addition
+* Subtraction
+* Multiplication
+* Division
+
+Your functions should **return** the result.
+
+Then display the final answer.
+
+### Important
+
+Don't make one giant block of code.
+
+Think:
+
+```text
+Input
+  ↓
+Choose operation
+  ↓
+Call appropriate function
+  ↓
+Return result
+  ↓
+Display result
+```
+
+This is your first step towards **structuring programs like an engineer**.
+
+---
+
+# 🧠 Day 05 Assessment
+
+## 🟢 Question 1
+
+What will this output?
+
+```python
+def greet():
+    print("Hello")
+
+greet()
+greet()
+```
+
+---
+
+## 🟢 Question 2
+
+What is the difference between:
+
+```python
+def greet(name):
+```
+
+and
+
+```python
+greet("Ragesh")
+```
+
+Explain in your own words.
+
+---
+
+## 🟡 Question 3
+
+Predict the output:
+
+```python
+def add(a, b):
+    return a + b
+
+result = add(5, 10)
+
+print(result)
+```
+
+---
+
+## 🟡 Question 4
+
+What will this print?
+
+```python
+def square(number):
+    return number * number
+
+x = square(4)
+
+print(x)
+```
+
+---
+
+## 🔴 Question 5
+
+Predict the final output:
+
+```python
+def calculate(number):
+    return number * 2 + 5
+
+result = calculate(10)
+
+print(result)
+```
+
+Explain the calculation step by step.
+
+---
+
+# 🎯 End-of-Day Challenge
+
+Create a **Student Marks Analyzer** using functions.
+
+Your program should:
+
+1. Ask for the student's name.
+2. Ask for marks in **three subjects**.
+3. Create a function to calculate the total.
+4. Create a function to calculate the average.
+5. Create a function to determine the grade.
+6. Display:
+
+   * Name
+   * Total
+   * Average
+   * Grade
+
+### Rules
+
+```text
+90+       → A
+75–89     → B
+50–74     → C
+Below 50  → Fail
+```
+
+**Important:** Build the functions yourself.
+
+Don't worry if your first attempt has errors. **Debugging your own code is part of today's learning.**
+
+---
+
+# 🔥 Day 05 Key Idea
+
+Today you went from:
+
+```text
+Writing instructions
+```
+
+to:
+
+```text
+Designing reusable pieces of a program
+```
+
+Remember this:
+
+> **A function is a reusable block of code designed to perform a specific task.**
+
+And remember the most important distinction:
+
+```python
+print()
+```
+
+➡️ shows something on the screen.
+
+```python
+return
+```
+
+➡️ sends a result back so your program can use it.
+
+That distinction will become **very important** when we start building ML models.
