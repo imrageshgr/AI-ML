@@ -8,7 +8,7 @@ By the end of Day 05, you should understand:
 * How to call a function
 * Parameters
 * Arguments
-* `return`
+* `return` 
 * Difference between `print()` and `return`
 * Multiple parameters
 * Reusing functions
