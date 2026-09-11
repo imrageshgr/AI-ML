@@ -1,0 +1,689 @@
+### 🎯 Today's goal
+
+By the end of Day 06, you should be able to:
+
+* Create a list
+* Access elements using indexes
+* Change list values
+* Add and remove elements
+* Loop through a list
+* Calculate sum, average, maximum and minimum
+* Use lists with functions
+* Take multiple values from the user
+
+---
+
+# 1. What is a List?
+
+A list stores **multiple values inside one variable**.
+
+Without a list:
+
+```python
+mark1 = 80
+mark2 = 75
+mark3 = 90
+mark4 = 65
+```
+
+With a list:
+
+```python
+marks = [80, 75, 90, 65]
+```
+
+Much easier.
+
+Think of it like a box containing multiple values:
+
+```text
+marks
+ ↓
+[80, 75, 90, 65]
+```
+
+---
+
+# 2. Creating a List
+
+```python
+marks = [80, 75, 90, 65]
+
+print(marks)
+```
+
+Output:
+
+```text
+[80, 75, 90, 65]
+```
+
+A list can contain different data types:
+
+```python
+student = ["Ragesh", 21, 85.5, True]
+
+print(student)
+```
+
+---
+
+# 3. List Index
+
+Python starts counting from **0**.
+
+```python
+marks = [80, 75, 90, 65]
+```
+
+Positions:
+
+```text
+Value:   80   75   90   65
+Index:    0    1    2    3
+```
+
+So:
+
+```python
+print(marks[0])
+```
+
+Output:
+
+```text
+80
+```
+
+```python
+print(marks[2])
+```
+
+Output:
+
+```text
+90
+```
+
+### Important
+
+```python
+marks[0]   # first
+marks[1]   # second
+marks[2]   # third
+marks[3]   # fourth
+```
+
+---
+
+# 4. Changing a List Value
+
+You can change an existing value.
+
+```python
+marks = [80, 75, 90, 65]
+
+marks[1] = 85
+
+print(marks)
+```
+
+Output:
+
+```text
+[80, 85, 90, 65]
+```
+
+Why?
+
+Because:
+
+```python
+marks[1] = 85
+```
+
+means:
+
+> Go to index 1 and replace its value with 85.
+
+---
+
+# 5. Adding Values — `append()`
+
+```python
+marks = [80, 75, 90]
+
+marks.append(65)
+
+print(marks)
+```
+
+Output:
+
+```text
+[80, 75, 90, 65]
+```
+
+`append()` adds a value to the **end**.
+
+Another example:
+
+```python
+names = []
+
+names.append("Ragesh")
+names.append("Rahul")
+names.append("Arun")
+
+print(names)
+```
+
+Output:
+
+```text
+['Ragesh', 'Rahul', 'Arun']
+```
+
+---
+
+# 6. Removing Values — `remove()`
+
+```python
+marks = [80, 75, 90, 65]
+
+marks.remove(75)
+
+print(marks)
+```
+
+Output:
+
+```text
+[80, 90, 65]
+```
+
+It removes the value `75`.
+
+---
+
+# 7. Finding the Length — `len()`
+
+```python
+marks = [80, 75, 90, 65]
+
+print(len(marks))
+```
+
+Output:
+
+```text
+4
+```
+
+`len()` tells us how many items are in the list.
+
+---
+
+# 8. Loop Through a List
+
+This is **very important**.
+
+```python
+marks = [80, 75, 90, 65]
+
+for mark in marks:
+    print(mark)
+```
+
+Output:
+
+```text
+80
+75
+90
+65
+```
+
+The loop automatically takes each value.
+
+```text
+mark = 80
+mark = 75
+mark = 90
+mark = 65
+```
+
+---
+
+# 9. List + `if`
+
+You can make decisions for every value.
+
+```python
+marks = [80, 45, 90, 30, 65]
+
+for mark in marks:
+    if mark >= 50:
+        print(mark, "Pass")
+    else:
+        print(mark, "Fail")
+```
+
+Output:
+
+```text
+80 Pass
+45 Fail
+90 Pass
+30 Fail
+65 Pass
+```
+
+---
+
+# 10. Sum of a List
+
+Python has a built-in `sum()` function.
+
+```python
+marks = [80, 75, 90, 65]
+
+total = sum(marks)
+
+print(total)
+```
+
+Output:
+
+```text
+310
+```
+
+---
+
+# 11. Average of a List
+
+We can combine `sum()` and `len()`.
+
+```python
+marks = [80, 75, 90, 65]
+
+total = sum(marks)
+average = total / len(marks)
+
+print(average)
+```
+
+Output:
+
+```text
+77.5
+```
+
+Notice the logic:
+
+```text
+Average = Total / Number of values
+```
+
+In Python:
+
+```python
+average = sum(marks) / len(marks)
+```
+
+---
+
+# 12. Maximum and Minimum
+
+```python
+marks = [80, 75, 90, 65]
+
+print(max(marks))
+print(min(marks))
+```
+
+Output:
+
+```text
+90
+65
+```
+
+So:
+
+```python
+max(marks)
+```
+
+→ largest value
+
+```python
+min(marks)
+```
+
+→ smallest value
+
+---
+
+# 13. List + Function ⭐
+
+Now combine **Day 05 functions** with today's lists.
+
+```python
+def calculate_average(numbers):
+    total = sum(numbers)
+    average = total / len(numbers)
+    return average
+
+
+marks = [80, 75, 90, 65]
+
+result = calculate_average(marks)
+
+print(result)
+```
+
+Output:
+
+```text
+77.5
+```
+
+This is important because you're now combining concepts from previous days.
+
+---
+
+# 14. Taking Multiple Values from User
+
+Suppose we want 5 marks.
+
+```python
+marks = []
+
+for i in range(5):
+    mark = int(input("Enter mark: "))
+    marks.append(mark)
+
+print(marks)
+```
+
+Example input:
+
+```text
+Enter mark: 80
+Enter mark: 75
+Enter mark: 90
+Enter mark: 65
+Enter mark: 88
+```
+
+Output:
+
+```text
+[80, 75, 90, 65, 88]
+```
+
+### Understand the process
+
+Initially:
+
+```python
+marks = []
+```
+
+Then:
+
+```python
+marks.append(mark)
+```
+
+keeps adding values.
+
+```text
+[]
+[80]
+[80, 75]
+[80, 75, 90]
+[80, 75, 90, 65]
+[80, 75, 90, 65, 88]
+```
+
+---
+
+# 🧩 Practice Problems
+
+Do these yourself.
+
+### Easy
+
+**1.**
+
+Create a list:
+
+```text
+10, 20, 30, 40, 50
+```
+
+Print the first and last values.
+
+---
+
+**2.**
+
+Create:
+
+```python
+numbers = [5, 10, 15, 20, 25]
+```
+
+Print every number using a `for` loop.
+
+---
+
+**3.**
+
+Create a list of 5 marks and print:
+
+* Total
+* Average
+* Highest mark
+* Lowest mark
+
+---
+
+### Medium
+
+**4.**
+
+Create:
+
+```python
+numbers = [10, 15, 22, 31, 40, 55]
+```
+
+Print only the even numbers.
+
+Expected:
+
+```text
+10
+22
+40
+```
+
+---
+
+**5.**
+
+Create a list of marks and count how many students passed.
+
+Passing mark = `50`.
+
+Example:
+
+```text
+[80, 45, 60, 30, 90, 40]
+```
+
+Expected:
+
+```text
+3 students passed
+```
+
+---
+
+**6.**
+
+Create a function:
+
+```python
+def find_average(numbers):
+```
+
+It should receive a list and return the average.
+
+---
+
+# 🚀 Day 06 Main Project
+
+## **Student Marks Analyzer**
+
+Build a program that:
+
+1. Asks how many students there are.
+2. Takes each student's mark.
+3. Stores all marks in a list.
+4. Displays all marks.
+5. Calculates total.
+6. Calculates average.
+7. Displays highest mark.
+8. Displays lowest mark.
+9. Counts how many students passed.
+10. Counts how many students failed.
+
+### Example
+
+```text
+How many students: 5
+
+Enter mark: 80
+Enter mark: 45
+Enter mark: 90
+Enter mark: 30
+Enter mark: 65
+
+Marks: [80, 45, 90, 30, 65]
+
+Total: 310
+Average: 62.0
+Highest: 90
+Lowest: 30
+Passed: 3
+Failed: 2
+```
+
+### ⭐ Extra requirement
+
+Use a function:
+
+```python
+def analyze_marks(marks):
+```
+
+This function should perform the analysis.
+
+---
+
+# 🧪 Day 06 Assessment
+
+Don't run these first. **Predict the output.**
+
+### Question 1
+
+```python
+numbers = [10, 20, 30]
+
+numbers.append(40)
+
+print(numbers)
+```
+
+What is the output?
+
+---
+
+### Question 2
+
+```python
+numbers = [10, 20, 30]
+
+numbers[0] = 100
+
+print(numbers)
+```
+
+---
+
+### Question 3
+
+```python
+numbers = [5, 10, 15, 20]
+
+print(len(numbers))
+print(sum(numbers))
+```
+
+---
+
+### Question 4
+
+```python
+numbers = [10, 25, 30, 45]
+
+for number in numbers:
+    if number > 20:
+        print(number)
+```
+
+---
+
+### Question 5 ⭐
+
+What will this print?
+
+```python
+def calculate(numbers):
+    return sum(numbers) / len(numbers)
+
+marks = [60, 70, 80]
+
+result = calculate(marks)
+
+print(result)
+```
+
+---
+
+## 🎯 Today's independent challenge
+
+After practising the above, **don't copy the main project**.
+
+Build this yourself:
+
+### **Shopping Cart Analyzer**
+
+The program should:
+
+* Ask how many products were purchased.
+* Take each product price.
+* Store the prices in a list.
+* Calculate total price.
+* Find the highest price.
+* Find the lowest price.
+* Calculate average price.
+* Count how many products cost more than ₹500.
+
+
+
