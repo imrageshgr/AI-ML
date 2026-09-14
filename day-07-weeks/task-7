@@ -1,0 +1,371 @@
+## 🏆 Weekly Mini-Project: Student Performance Management System
+
+Today is **not a new major concept day**.
+
+Day 07 is your **first weekly mini-project**. We combine everything you learned in **Days 01–06**:
+
+| Day    | Skill                               |
+| ------ | ----------------------------------- |
+| Day 01 | Variables, data types, input/output |
+| Day 02 | Operators & calculations            |
+| Day 03 | `if`, `elif`, `else`                |
+| Day 04 | `for`, `while`, `range()`           |
+| Day 05 | Functions & `return`                |
+| Day 06 | Lists                               |
+
+Today your job is to **combine them into one working program**.
+
+---
+
+# 🎯 Project
+
+## **Student Performance Management System**
+
+Build a program that manages the marks of multiple students.
+
+### Your program should ask:
+
+```text
+Enter number of students: 3
+```
+
+For each student:
+
+```text
+Enter student name: Ragesh
+Enter mark 1: 80
+Enter mark 2: 75
+Enter mark 3: 90
+```
+
+Then calculate:
+
+* Total
+* Average
+* Grade
+* Pass/Fail
+
+---
+
+# 🧠 Grade Rules
+
+Use:
+
+```text
+Average >= 90  → A
+Average >= 75  → B
+Average >= 50  → C
+Average < 50   → Fail
+```
+
+---
+
+# Step 1 — Create a Function
+
+Start with:
+
+```python
+def calculate_total(marks):
+    return sum(marks)
+```
+
+Example:
+
+```python
+marks = [80, 75, 90]
+
+total = calculate_total(marks)
+
+print(total)
+```
+
+Output:
+
+```text
+245
+```
+
+---
+
+# Step 2 — Average Function
+
+```python
+def calculate_average(marks):
+    return sum(marks) / len(marks)
+```
+
+Example:
+
+```python
+marks = [80, 75, 90]
+
+average = calculate_average(marks)
+
+print(average)
+```
+
+Output:
+
+```text
+81.66666666666667
+```
+
+---
+
+# Step 3 — Grade Function
+
+```python
+def calculate_grade(average):
+    if average >= 90:
+        return "A"
+    elif average >= 75:
+        return "B"
+    elif average >= 50:
+        return "C"
+    else:
+        return "Fail"
+```
+
+Example:
+
+```python
+average = 81
+
+grade = calculate_grade(average)
+
+print(grade)
+```
+
+Output:
+
+```text
+B
+```
+
+---
+
+# Step 4 — Put Them Together
+
+```python
+marks = [80, 75, 90]
+
+total = calculate_total(marks)
+average = calculate_average(marks)
+grade = calculate_grade(average)
+
+print("Total:", total)
+print("Average:", average)
+print("Grade:", grade)
+```
+
+Output:
+
+```text
+Total: 245
+Average: 81.66666666666667
+Grade: B
+```
+
+---
+
+# Step 5 — Add a List of Students
+
+Now we use a loop.
+
+```python
+number_of_students = int(input("Enter number of students: "))
+
+for i in range(number_of_students):
+    name = input("Enter student name: ")
+
+    marks = []
+
+    for j in range(3):
+        mark = int(input("Enter mark: "))
+        marks.append(mark)
+
+    total = calculate_total(marks)
+    average = calculate_average(marks)
+    grade = calculate_grade(average)
+
+    print("\nStudent:", name)
+    print("Marks:", marks)
+    print("Total:", total)
+    print("Average:", average)
+    print("Grade:", grade)
+```
+
+### Notice how many concepts are combined here:
+
+```text
+input()
+   ↓
+variables
+   ↓
+list
+   ↓
+append()
+   ↓
+for loop
+   ↓
+functions
+   ↓
+sum()
+   ↓
+len()
+   ↓
+if / elif / else
+   ↓
+output
+```
+
+That's exactly why we're doing this project today.
+
+---
+
+# ⭐ Your Main Challenge
+
+Don't simply copy the code above.
+
+Build your own version with these requirements:
+
+### **Student Performance Management System**
+
+Your program must:
+
+1. Ask the number of students.
+2. Ask each student's name.
+3. Take **3 subject marks**.
+4. Store the marks in a list.
+5. Calculate total using a function.
+6. Calculate average using a function.
+7. Calculate grade using a function.
+8. Display whether the student **Passed or Failed**.
+9. Repeat for all students.
+
+### Example final output
+
+```text
+Enter number of students: 2
+
+Enter student name: Ragesh
+Enter mark: 80
+Enter mark: 75
+Enter mark: 90
+
+Student: Ragesh
+Marks: [80, 75, 90]
+Total: 245
+Average: 81.67
+Grade: B
+Result: Pass
+
+
+Enter student name: Arun
+Enter mark: 40
+Enter mark: 35
+Enter mark: 45
+
+Student: Arun
+Marks: [40, 35, 45]
+Total: 120
+Average: 40.0
+Grade: Fail
+Result: Fail
+```
+
+---
+
+# 🧪 Day 07 Assessment
+
+Predict the answers **before running**.
+
+### Q1
+
+```python
+numbers = [10, 20, 30]
+
+numbers.append(40)
+
+print(len(numbers))
+print(sum(numbers))
+```
+
+---
+
+### Q2
+
+```python
+def check(number):
+    if number >= 50:
+        return "Pass"
+    else:
+        return "Fail"
+
+print(check(75))
+print(check(30))
+```
+
+---
+
+### Q3
+
+```python
+def calculate(numbers):
+    return sum(numbers) / len(numbers)
+
+marks = [50, 60, 70]
+
+print(calculate(marks))
+```
+
+---
+
+### Q4 — Think carefully ⭐
+
+```python
+numbers = []
+
+for i in range(1, 5):
+    numbers.append(i * 10)
+
+print(numbers)
+```
+
+What is the final list?
+
+---
+
+# 🔥 Independent Challenge
+
+After completing the student project, build this **without looking at the previous code**:
+
+## **Class Performance Analyzer**
+
+Given:
+
+```text
+Number of students: 5
+```
+
+Take marks for each student and calculate:
+
+* Each student's total
+* Each student's average
+* Each student's grade
+* Number of passed students
+* Number of failed students
+* Highest average
+* Lowest average
+* Class average
+
+### Difficulty
+
+🟢 Days 1–3 → individual student
+🟡 Days 4–6 → multiple students
+🔴 Day 7 → **combine everything**
+
+**Do not worry if your first version has errors. The goal today is to make the logic yourself.**
+
+
+
